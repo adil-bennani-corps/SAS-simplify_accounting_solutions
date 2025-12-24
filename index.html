@@ -284,49 +284,6 @@
 
     <script src="script.js"></script>
     <script>
-        // Formulaire Hero Contact
-        const heroContactForm = document.getElementById('heroContactForm');
-        const heroFormMessage = document.getElementById('heroFormMessage');
-        
-        if (heroContactForm) {
-            heroContactForm.addEventListener('submit', (e) => {
-                e.preventDefault();
-                
-                const name = document.getElementById('heroName').value;
-                const email = document.getElementById('heroEmail').value;
-                const phone = document.getElementById('heroPhone').value;
-                const need = document.getElementById('heroNeed').value;
-                
-                const subject = encodeURIComponent(`Demande de contact Hero - ${name}`);
-                const emailBody = `Nom: ${name}\nEmail: ${email}\nTéléphone: ${phone}\nType de besoin: ${need}`;
-                const encodedBody = encodeURIComponent(emailBody);
-                
-                const mailtoLink = `mailto:info@simplyaccounts.be?subject=${subject}&body=${encodedBody}`;
-                window.location.href = mailtoLink;
-                
-                heroFormMessage.textContent = 'Votre client de messagerie s\'ouvre. Merci !';
-                heroFormMessage.className = 'form-message success';
-            });
-        }
-
-        // FAQ Accordéon
-        document.querySelectorAll('.faq-question').forEach(question => {
-            question.addEventListener('click', () => {
-                const faqItem = question.parentElement;
-                const isActive = faqItem.classList.contains('active');
-                
-                // Fermer toutes les autres FAQ
-                document.querySelectorAll('.faq-item').forEach(item => {
-                    item.classList.remove('active');
-                });
-                
-                // Ouvrir/fermer celle-ci
-                if (!isActive) {
-                    faqItem.classList.add('active');
-                }
-            });
-        });
-
         // Animation des compteurs statistiques
         (function() {
             function animateCounter(element) {
