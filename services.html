@@ -1,0 +1,372 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Services comptables complets à Vilvoorde : tenue de comptabilité, fiscalité, TVA, création de sociétés. Expert agréé. Devis gratuit.">
+    <title>Nos Services Comptables à Vilvoorde | Comptabilité, Fiscalité, TVA | SAS</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://huggingface.co/spaces/benneee85/reactify-magic-wand/resolve/main/images/unnamed.png" alt="SAS Logo" class="logo-image">
+                    </a>
+                    <div class="logo-subtitle">Simply Accounts Solutions</div>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="services.html" class="nav-link active">Nos services</a>
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <a href="contact.html" class="nav-link">Contact</a>
+                    <a href="contact.html" class="btn-primary">Prendre rendez-vous</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile" id="mobileMenu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link active">Nos services</a>
+                <a href="about.html" class="nav-link">À propos</a>
+                <a href="contact.html" class="nav-link">Contact</a>
+                <a href="contact.html" class="btn-primary">Prendre rendez-vous</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="services-hero">
+        <div class="container">
+            <nav class="services-breadcrumb">
+                <a href="index.html">Accueil</a>
+                <span class="breadcrumb-separator">></span>
+                <span>Nos services</span>
+            </nav>
+            <h1 class="services-hero-title">NOS SERVICES</h1>
+            <p class="services-hero-subtitle">Une expertise comptable complète pour tous vos besoins</p>
+        </div>
+    </section>
+
+
+    <!-- Service 1: Comptabilité -->
+    <section id="comptabilite" class="service-section-card">
+        <div class="container">
+            <div class="service-grid service-grid-right">
+                <!-- COLONNE 1 : CONTENU -->
+                <div class="service-content">
+                    <span class="service-badge">💼 Pour entreprises et PME</span>
+                    
+                    <h2 class="service-title-card">Comptabilité d'entreprise</h2>
+                    
+                    <p class="service-description">
+                        Nous prenons en charge l'intégralité de votre comptabilité, de l'encodage quotidien à l'établissement de vos comptes annuels. Notre expertise vous garantit une comptabilité rigoureuse et conforme.
+                    </p>
+                    
+                    <ul class="service-features-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Tenue de comptabilité complète</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Comptes annuels et bilan</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Suivi budgétaire et reporting</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Conseils en gestion financière</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="contact.html?service=comptabilite" class="btn-service-cta">
+                        En savoir plus <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- COLONNE 2 : VISUEL -->
+                <div class="service-visual">
+                    <div class="service-icon-circle">
+                        <i class="fas fa-calculator"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 2: Fiscalité -->
+    <section id="fiscalite" class="service-section-card service-section-alt">
+        <div class="container">
+            <div class="service-grid service-grid-left">
+                <!-- COLONNE 1 : VISUEL -->
+                <div class="service-visual">
+                    <div class="service-icon-circle">
+                        <i class="fas fa-file-invoice-dollar"></i>
+                    </div>
+                </div>
+                
+                <!-- COLONNE 2 : CONTENU -->
+                <div class="service-content">
+                    <span class="service-badge">📊 Tous profils</span>
+                    
+                    <h2 class="service-title-card">Fiscalité & Optimisation</h2>
+                    
+                    <p class="service-description">
+                        Optimisez votre situation fiscale grâce à nos conseils personnalisés. Nous vous accompagnons dans vos déclarations et planifications pour maximiser vos avantages fiscaux dans le respect de la législation.
+                    </p>
+                    
+                    <ul class="service-features-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Déclarations IPP/ISOC</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Optimisation fiscale</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Planification fiscale</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Assistance contrôles fiscaux</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="contact.html?service=fiscalite" class="btn-service-cta">
+                        En savoir plus <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 3: TVA -->
+    <section id="tva" class="service-section-card">
+        <div class="container">
+            <div class="service-grid service-grid-right">
+                <!-- COLONNE 1 : CONTENU -->
+                <div class="service-content">
+                    <span class="service-badge">💳 Pour tous</span>
+                    
+                    <h2 class="service-title-card">Gestion de la TVA</h2>
+                    
+                    <p class="service-description">
+                        Simplifiez la gestion de votre TVA avec notre accompagnement complet. Déclarations périodiques, récupération, listings clients : nous gérons tous les aspects de votre TVA pour vous faire gagner du temps.
+                    </p>
+                    
+                    <ul class="service-features-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Déclarations périodiques de TVA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Conseil en matière de TVA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Récupération de TVA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Gestion des listings clients</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="contact.html?service=tva" class="btn-service-cta">
+                        En savoir plus <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- COLONNE 2 : VISUEL -->
+                <div class="service-visual">
+                    <div class="service-icon-circle">
+                        <i class="fas fa-percent"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 4: Création de sociétés -->
+    <section id="creation" class="service-section-card service-section-alt">
+        <div class="container">
+            <div class="service-grid service-grid-left">
+                <!-- COLONNE 1 : VISUEL -->
+                <div class="service-visual">
+                    <div class="service-icon-circle">
+                        <i class="fas fa-rocket"></i>
+                    </div>
+                </div>
+                
+                <!-- COLONNE 2 : CONTENU -->
+                <div class="service-content">
+                    <span class="service-badge">🚀 Pour créateurs et entrepreneurs</span>
+                    
+                    <h2 class="service-title-card">Création & Gestion de sociétés</h2>
+                    
+                    <p class="service-description">
+                        Donnez vie à votre projet entrepreneurial avec notre accompagnement complet. De la constitution de votre société aux modifications statutaires, nous vous guidons à chaque étape de votre développement.
+                    </p>
+                    
+                    <ul class="service-features-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Constitution de sociétés</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Plan financier complet</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Secrétariat social</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Modification de statuts</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="contact.html?service=creation" class="btn-service-cta">
+                        En savoir plus <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Service 5: Indépendants -->
+    <section id="independants" class="service-section-card">
+        <div class="container">
+            <div class="service-grid service-grid-right">
+                <!-- COLONNE 1 : CONTENU -->
+                <div class="service-content">
+                    <span class="service-badge">💡 Spécial indépendants et freelances</span>
+                    
+                    <h2 class="service-title-card">Services pour indépendants</h2>
+                    
+                    <p class="service-description">
+                        Solutions adaptées pour les indépendants et freelances. De l'installation à la gestion quotidienne, nous vous accompagnons pour vous permettre de vous concentrer sur votre activité.
+                    </p>
+                    
+                    <ul class="service-features-list">
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Accompagnement au démarrage</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Comptabilité simplifiée</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Déclarations fiscales et TVA</span>
+                        </li>
+                        <li>
+                            <i class="fas fa-check-circle"></i>
+                            <span>Conseils personnalisés</span>
+                        </li>
+                    </ul>
+                    
+                    <a href="contact.html?service=independants" class="btn-service-cta">
+                        En savoir plus <i class="fas fa-arrow-right"></i>
+                    </a>
+                </div>
+                
+                <!-- COLONNE 2 : VISUEL -->
+                <div class="service-visual">
+                    <div class="service-icon-circle">
+                        <i class="fas fa-user-tie"></i>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="services-cta-final">
+        <div class="container">
+            <h2 class="services-cta-title">Vous avez un besoin spécifique ?</h2>
+            <p class="services-cta-subtitle">Contactez-nous pour en discuter</p>
+            <a href="contact.html" class="btn-cta-final">
+                Prendre rendez-vous
+            </a>
+        </div>
+    </section>
+
+
+    <!-- Footer -->
+    <footer class="footer-thibaux">
+        <div class="container">
+            <div class="footer-grid-thibaux">
+                <div class="footer-column-thibaux footer-column-1">
+                    <img src="https://huggingface.co/spaces/benneee85/reactify-magic-wand/resolve/main/images/unnamed.png" alt="SAS Logo" class="footer-logo-thibaux">
+                    <p class="footer-info-thibaux">
+                        Expert-Comptable<br>
+                        ITAA 53.310.893<br>
+                        BCE 0797.968.124
+                    </p>
+                </div>
+                <div class="footer-column-thibaux footer-column-2">
+                    <h4 class="footer-title-thibaux">NOS SERVICES</h4>
+                    <ul class="footer-links-thibaux">
+                        <li><a href="services.html#comptabilite">Comptabilité & Fiscalité</a></li>
+                        <li><a href="services.html#tva">TVA</a></li>
+                        <li><a href="services.html#creation">Création d'entreprise</a></li>
+                        <li><a href="services.html#independants">Services indépendants</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column-thibaux footer-column-3">
+                    <h4 class="footer-title-thibaux">INFORMATIONS DE CONTACT</h4>
+                    <ul class="footer-contact-thibaux">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+3227518208">+32 (0)2 / 751 82 08</a></li>
+                        <li><i class="fas fa-mobile-alt"></i> <a href="tel:+32489875383">+32 (0)489 / 87 53 83</a></li>
+                        <li><i class="fas fa-mobile-alt"></i> <a href="tel:+32492842027">+32 (0)492 / 84 20 27</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@simplyaccounts.be">info@simplyaccounts.be</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Grote Markt 3 bus 2<br>1800 Vilvoorde</li>
+                        <li><i class="fas fa-parking"></i> Parking sous la Grand-Place</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-thibaux">
+                <div class="footer-copyright-thibaux">
+                    <p>Copyright © 2025 SAS Simply Accounts Solutions</p>
+                </div>
+                <div class="footer-legal-thibaux">
+                    <a href="legal.html">Mentions légales</a>
+                    <span>|</span>
+                    <a href="#">Politique des cookies</a>
+                    <span>|</span>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+</body>
+</html>
+

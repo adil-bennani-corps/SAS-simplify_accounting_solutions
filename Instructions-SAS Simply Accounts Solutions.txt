@@ -1,0 +1,801 @@
+# SAS Simply Accounts Solutions - MVP Page d'Accueil
+## Basé sur le design de la Fiduciaire Thibaux
+
+---
+
+## 📐 STRUCTURE EXACTE DE LA PAGE D'ACCUEIL
+
+### Vue d'ensemble
+La page d'accueil suit **exactement** la structure de la Fiduciaire Thibaux avec ces sections dans cet ordre:
+
+1. **Header/Navigation** (fixe)
+2. **Hero Section** (image de fond + titre centré)
+3. **Section Services** (3 colonnes fond coloré)
+4. **Section Bienvenue** (2 colonnes: image + texte)
+5. **Section Timeline/Histoire** (4 étapes chronologiques)
+6. **Section Actualités** (optionnel - peut être remplacé)
+7. **Section Statistiques** (3 chiffres clés)
+8. **Footer** (complet avec 3 colonnes)
+
+---
+
+## 🎨 PALETTE DE COULEURS (adaptée de Thibaux)
+
+### Couleurs principales
+- **Bleu foncé** : #2C5F7A (remplace le bleu Thibaux - pour les sections)
+- **Violet** : #9B5BA5 (couleur de SAS - pour accents et boutons)
+- **Gris foncé** : #2C3E50 (pour textes et footer)
+- **Blanc** : #FFFFFF (fond principal)
+- **Gris clair** : #F8F9FA (sections alternées)
+
+### Dégradés
+- Sections colorées : Fond bleu foncé vers bleu-violet
+- Hero : Overlay sombre sur image (rgba(0,0,0,0.5))
+
+---
+
+## 📄 SECTION 1 : HEADER / NAVIGATION
+
+### Structure (identique à Thibaux)
+
+**Layout** :
+```
+[Logo SAS]     [Accueil] [Nos services] [À propos] [Actualités] [Contact]
+```
+
+### Spécifications
+
+**Logo** (à gauche) :
+- Logo SAS fourni par la cliente
+- Hauteur : 70px
+- Largeur : auto
+- Clickable vers #accueil
+
+**Menu de navigation** (à droite) :
+- Police : DM Sans, 16px, poids 500
+- Couleur : #2C3E50
+- Espacement entre liens : 32px
+- Hover : couleur change vers #9B5BA5 (violet)
+
+**Items du menu** :
+1. Accueil
+2. Nos services
+3. À propos
+4. Actualités
+5. Contact
+
+**Comportement** :
+- Position : Fixed/Sticky
+- Background : Blanc avec légère ombre au scroll
+- Transition douce au scroll (ombre apparaît)
+- Responsive : menu hamburger sur mobile
+
+---
+
+## 📄 SECTION 2 : HERO SECTION
+
+### Design (exactement comme Thibaux)
+
+**Image de fond** :
+- Photo : Calculatrice/documents comptables stylisée (similaire au compas de Thibaux)
+- Dimensions : Pleine largeur, hauteur 600px (desktop) / 400px (mobile)
+- Overlay : rgba(44, 95, 122, 0.7) - bleu foncé semi-transparent
+- **Alternative** : Photo du bureau sur la Grand-Place avec overlay
+
+**Contenu centré** :
+
+**Titre principal (H1)** :
+```
+SAS SIMPLY ACCOUNTS SOLUTIONS
+```
+- Police : Lora, Bold, 56px (desktop) / 36px (mobile)
+- Couleur : #FFFFFF
+- Lettres espacées : 2px
+- Centré
+- Margin-bottom : 20px
+
+**Sous-titre (H2)** :
+```
+EXPERT-COMPTABLE AGRÉÉ ITAA À VILVOORDE
+```
+- Police : DM Sans, Regular, 28px (desktop) / 20px (mobile)
+- Couleur : #FFFFFF
+- Centré
+- Opacité : 0.95
+
+**Badge ITAA** (sous le sous-titre) :
+- Fond : rgba(255,255,255,0.2)
+- Border : 2px solid #FFFFFF
+- Padding : 12px 24px
+- Border-radius : 30px
+- Texte : "ITAA 53.310.893"
+- Police : DM Sans, 16px, Bold
+- Centré
+
+**Espacement** :
+- Padding vertical : 150px (top) / 100px (bottom)
+- Tout est centré verticalement et horizontalement
+
+---
+
+## 📄 SECTION 3 : NOS SERVICES (3 COLONNES)
+
+### Design (exactement comme Thibaux - 3 services)
+
+**Layout général** :
+- Fond : Dégradé horizontal de #2C5F7A (gauche) vers #9B5BA5 (droite)
+- Padding : 80px (vertical) / 24px (horizontal)
+- 3 colonnes égales avec séparateurs verticaux subtils
+
+**Structure** :
+```
+[Service 1]  |  [Service 2]  |  [Service 3]
+```
+
+### Service 1 : EXPERTISE-COMPTABILITÉ
+
+**Titre** :
+```
+EXPERTISE-COMPTABILITÉ
+```
+- Police : DM Sans, Bold, 24px
+- Couleur : #FFFFFF
+- Centré
+- Margin-bottom : 20px
+
+**Description** :
+```
+Nous nous occupons de votre comptabilité de A à Z.
+```
+- Police : DM Sans, Regular, 16px
+- Couleur : rgba(255,255,255,0.9)
+- Centré
+- Line-height : 1.7
+
+---
+
+### Service 2 : FISCALITÉ & TVA
+
+**Titre** :
+```
+FISCALITÉ & TVA
+```
+- Police : DM Sans, Bold, 24px
+- Couleur : #FFFFFF
+- Centré
+- Margin-bottom : 20px
+
+**Description** :
+```
+Nous vous accompagnons dans toutes vos obligations fiscales et déclarations TVA.
+```
+- Police : DM Sans, Regular, 16px
+- Couleur : rgba(255,255,255,0.9)
+- Centré
+- Line-height : 1.7
+
+---
+
+### Service 3 : CONSEIL & ACCOMPAGNEMENT
+
+**Titre** :
+```
+CONSEIL & ACCOMPAGNEMENT
+```
+- Police : DM Sans, Bold, 24px
+- Couleur : #FFFFFF
+- Centré
+- Margin-bottom : 20px
+
+**Description** :
+```
+Nous vous guidons dans la création et la gestion de votre entreprise.
+```
+- Police : DM Sans, Regular, 16px
+- Couleur : rgba(255,255,255,0.9)
+- Centré
+- Line-height : 1.7
+
+**Notes** :
+- Séparateurs verticaux : 1px solid rgba(255,255,255,0.2) entre chaque colonne
+- Responsive : 1 colonne sur mobile, empilement vertical
+
+---
+
+## 📄 SECTION 4 : BIENVENUE (IMAGE + TEXTE)
+
+### Design (exactement comme Thibaux)
+
+**Layout** : 2 colonnes (50/50)
+
+**Fond** : Blanc #FFFFFF ou Gris très clair #F8F9FA
+
+**Padding** : 100px (vertical) / 24px (horizontal)
+
+### COLONNE GAUCHE : Image
+
+**Image** :
+- **Photo à fournir** : Photo du bureau SAS sur la Grand-Place
+- Dimensions recommandées : 700x600px
+- Border-radius : 8px
+- Box-shadow : 0 10px 40px rgba(0,0,0,0.1)
+- **Alternative si pas de photo** : Image stylisée de comptabilité (similaire au néon Thibaux)
+
+### COLONNE DROITE : Contenu
+
+**Titre (H2)** :
+```
+Bienvenue chez SAS Simply Accounts Solutions
+```
+- Police : Lora, Bold, 36px
+- Couleur : #2C5F7A (bleu foncé)
+- Margin-bottom : 30px
+
+**Paragraphe 1** :
+```
+Le Cabinet s'appuie sur une expertise comptable reconnue et un accompagnement personnalisé. Expert-comptable agréé ITAA (numéro 53.310.893), nous sommes spécialisés dans la comptabilité, la fiscalité, la TVA et le conseil en gestion d'entreprise.
+```
+- Police : DM Sans, Regular, 17px
+- Couleur : #4A5568
+- Line-height : 1.8
+- Margin-bottom : 20px
+
+**Paragraphe 2** :
+```
+Installé sur la Grand-Place de Vilvoorde avec un parking facile directement sous la place, nous offrons à nos clients une large gamme de services personnalisés et adaptés au plus près de leurs besoins.
+```
+- Police : DM Sans, Regular, 17px
+- Couleur : #4A5568
+- Line-height : 1.8
+- Margin-bottom : 30px
+
+**Badge/Highlight** (encadré violet clair) :
+```
+🅿️ PARKING FACILE DISPONIBLE
+Directement sous la Grand-Place de Vilvoorde
+```
+- Fond : rgba(155, 91, 165, 0.1)
+- Border-left : 4px solid #9B5BA5
+- Padding : 16px 20px
+- Border-radius : 4px
+- Margin-bottom : 30px
+
+**Bouton CTA** :
+```
+CONTACTEZ-NOUS
+```
+- Fond : #9B5BA5 (violet)
+- Couleur texte : #FFFFFF
+- Padding : 16px 40px
+- Border-radius : 4px
+- Police : DM Sans, Bold, 16px
+- Lettres espacées : 1px
+- Hover : Background plus foncé (#7E4A87)
+- Box-shadow : 0 4px 15px rgba(155, 91, 165, 0.3)
+
+**Responsive** :
+- Mobile : 1 colonne, image en premier puis texte
+
+---
+
+## 📄 SECTION 5 : NOTRE HISTOIRE (TIMELINE)
+
+### Design (exactement comme Thibaux - 4 étapes)
+
+**Fond** : Blanc #FFFFFF ou Gris clair #F8F9FA
+
+**Padding** : 80px (vertical) / 24px (horizontal)
+
+**Layout** : 4 colonnes égales en ligne
+
+### Structure des cartes
+
+Chaque étape a :
+- **Icône** (en haut) : Carré avec fond bleu foncé #2C5F7A, 80x80px, border-radius 8px, icône blanche centrée
+- **Année** (H3) : Police Lora, Bold, 48px, couleur #2C5F7A, centré
+- **Description** : Texte court, DM Sans Regular 16px, couleur #4A5568, centré
+
+### Étape 1 : LANCEMENT
+
+**Année** : *À DÉFINIR* (ex: 2015)
+
+**Icône** : Personne (Font Awesome: fa-user)
+
+**Texte** :
+```
+[Nom du fondateur] lance son activité de comptable indépendant à Vilvoorde. Agrément ITAA obtenu.
+```
+
+---
+
+### Étape 2 : EXPANSION
+
+**Année** : *À DÉFINIR* (ex: 2018)
+
+**Icône** : Groupe de personnes (Font Awesome: fa-users)
+
+**Texte** :
+```
+Le cabinet s'agrandit avec l'arrivée de nouveaux collaborateurs et une clientèle diversifiée.
+```
+
+---
+
+### Étape 3 : INSTALLATION GRAND-PLACE
+
+**Année** : *À DÉFINIR* (ex: 2020)
+
+**Icône** : Graphique croissance (Font Awesome: fa-chart-line)
+
+**Texte** :
+```
+Installation du bureau sur la Grand-Place de Vilvoorde. Modernisation des services et outils digitaux.
+```
+
+---
+
+### Étape 4 : SAS SIMPLY ACCOUNTS
+
+**Année** : *À DÉFINIR* (ex: 2023)
+
+**Icône** : Liste validée (Font Awesome: fa-tasks)
+
+**Texte** :
+```
+Création de SAS Simply Accounts Solutions. Service élargi pour entreprises, indépendants et particuliers.
+```
+
+**Responsive** :
+- Desktop : 4 colonnes en ligne
+- Tablet : 2x2 colonnes
+- Mobile : 1 colonne empilée
+
+---
+
+### CTA après Timeline
+
+**Fond** : Transparent ou gris très clair
+
+**Padding** : 60px vertical
+
+**Texte centré** :
+```
+Vous désirez en savoir plus et rencontrer notre équipe, contactez-nous !
+```
+- Police : Lora, Regular, 24px
+- Couleur : #2C3E50
+- Centré
+- Margin-bottom : 30px
+
+**Bouton** :
+```
+CONTACTEZ-NOUS
+```
+- Style identique au bouton de la section Bienvenue
+- Centré
+
+---
+
+## 📄 SECTION 6 : ACTUALITÉS (OPTIONNEL)
+
+### Design (comme Thibaux)
+
+**Fond** : Blanc #FFFFFF
+
+**Padding** : 80px (vertical) / 24px (horizontal)
+
+**Layout** : 2 colonnes (40/60)
+
+### COLONNE GAUCHE : Image
+
+**Image** :
+- Photo liée à l'actualité (ex: professionnel de santé pour article TVA médical de Thibaux)
+- Pour SAS : Photo liée à une actualité fiscale/comptable
+- Dimensions : 600x500px
+- Border-radius : 8px
+- Noir et blanc ou légèrement désaturée
+
+### COLONNE DROITE : Contenu
+
+**Titre de l'article** :
+```
+[Titre de l'actualité fiscale ou comptable]
+```
+- Exemple : "Nouvelles mesures fiscales 2025 pour les indépendants"
+- Police : Lora, SemiBold, 32px
+- Couleur : #2C3E50
+- Margin-bottom : 20px
+
+**Bouton** :
+```
+EN SAVOIR PLUS
+```
+- Fond : #2C5F7A (bleu foncé)
+- Couleur texte : #FFFFFF
+- Padding : 14px 32px
+- Border-radius : 4px
+- Police : DM Sans, SemiBold, 15px
+
+**Note** : Cette section peut être remplacée par une autre section pertinente si pas d'actualités
+
+---
+
+## 📄 SECTION 7 : STATISTIQUES
+
+### Design (exactement comme Thibaux)
+
+**Fond** : Blanc #FFFFFF ou Gris très clair #F8F9FA
+
+**Padding** : 60px (vertical) / 24px (horizontal)
+
+**Layout** : 3 colonnes égales, centrées
+
+### Structure des statistiques
+
+**Chiffre** :
+- Police : Lora, Bold, 72px
+- Couleur : #2C5F7A (bleu foncé)
+- Centré
+
+**Label** :
+- Police : DM Sans, Regular, 18px
+- Couleur : #4A5568
+- Centré
+- Margin-top : 10px
+
+### Statistique 1
+
+**Chiffre** :
+```
+3
+```
+
+**Label** :
+```
+Bureaux / Implantations
+```
+*(Si SAS n'a qu'un seul bureau, ajuster : "Bureau à Vilvoorde" ou autre métrique pertinente)*
+
+---
+
+### Statistique 2
+
+**Chiffre** :
+```
+100+
+```
+
+**Label** :
+```
+Clients satisfaits
+```
+
+---
+
+### Statistique 3
+
+**Chiffre** :
+```
+10+
+```
+
+**Label** :
+```
+Années d'expérience
+```
+
+**Animations** :
+- Compteurs animés au scroll (nombre s'incrémente progressivement)
+- Effet fade-in au scroll
+
+**Responsive** :
+- Desktop : 3 colonnes en ligne
+- Mobile : 3 lignes empilées
+
+---
+
+## 📄 SECTION 8 : FOOTER
+
+### Design (exactement comme Thibaux)
+
+**Fond** : #2C3E50 (gris très foncé)
+
+**Couleur texte** : #FFFFFF et rgba(255,255,255,0.8)
+
+**Padding** : 60px (vertical) / 24px (horizontal)
+
+**Layout** : 3 colonnes (30% / 25% / 45%)
+
+---
+
+### COLONNE 1 : Logo + Informations principales
+
+**Logo SAS** :
+- Version blanche du logo
+- Hauteur : 80px
+- Margin-bottom : 20px
+
+**Texte** :
+```
+Expert-Comptable
+ITAA 53.310.893
+BCE [À COMPLÉTER]
+```
+- Police : DM Sans, Regular, 16px
+- Couleur : rgba(255,255,255,0.8)
+- Line-height : 1.8
+
+---
+
+### COLONNE 2 : NOS SERVICES
+
+**Titre** :
+```
+NOS SERVICES
+```
+- Police : DM Sans, Bold, 18px
+- Couleur : #FFFFFF
+- Margin-bottom : 20px
+
+**Liste de liens** :
+- Comptabilité & Fiscalité
+- TVA
+- Création d'entreprise
+- Services indépendants
+- Services particuliers
+
+**Style des liens** :
+- Police : DM Sans, Regular, 15px
+- Couleur : rgba(255,255,255,0.8)
+- Line-height : 2
+- Hover : couleur #9B5BA5 (violet)
+
+---
+
+### COLONNE 3 : INFORMATIONS DE CONTACT
+
+**Titre** :
+```
+INFORMATIONS DE CONTACT
+```
+- Police : DM Sans, Bold, 18px
+- Couleur : #FFFFFF
+- Margin-bottom : 20px
+
+**Coordonnées** (avec icônes Font Awesome) :
+
+📞 **Téléphones** :
+```
++32 (0)2 / 751 82 08
++32 (0)489 / 87 53 83
++32 (0)492 / 84 20 27
+```
+
+✉️ **Email** :
+```
+contact@sas-accounts.be
+```
+
+📍 **Adresse** :
+```
+Grote Markt 3 bus 2
+1800 Vilvoorde
+```
+
+🅿️ **Parking** :
+```
+Parking sous la Grand-Place
+```
+
+**Style** :
+- Police : DM Sans, Regular, 15px
+- Couleur : rgba(255,255,255,0.8)
+- Line-height : 1.9
+- Icônes : couleur #9B5BA5 (violet)
+- Liens cliquables (tel:, mailto:) : hover couleur #9B5BA5
+
+---
+
+### BARRE INFÉRIEURE DU FOOTER
+
+**Séparateur** :
+- Border-top : 1px solid rgba(255,255,255,0.1)
+- Margin-top : 40px
+- Padding-top : 30px
+
+**Layout** : 2 colonnes (gauche/droite)
+
+**Gauche - Copyright** :
+```
+Copyright © 2025 SAS Simply Accounts Solutions | Développé par [Votre nom]
+```
+- Police : DM Sans, Regular, 14px
+- Couleur : rgba(255,255,255,0.6)
+
+**Droite - Liens légaux** :
+- Mentions légales
+- Politique des cookies
+- Politique de confidentialité
+
+**Style liens** :
+- Police : DM Sans, Regular, 14px
+- Couleur : rgba(255,255,255,0.6)
+- Séparateur : " | " entre les liens
+- Hover : couleur #9B5BA5
+
+---
+
+## 🎨 ÉLÉMENTS DE DESIGN GLOBAUX
+
+### Typographie
+
+**Polices** :
+- **Titres** : Lora (serif) - Poids : 400, 600, 700
+- **Corps** : DM Sans (sans-serif) - Poids : 400, 500, 600, 700
+
+**Import Google Fonts** :
+```html
+<link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+```
+
+---
+
+### Boutons
+
+**Bouton primaire** (style Thibaux) :
+- Background : #2C5F7A ou #9B5BA5
+- Couleur : #FFFFFF
+- Padding : 14px 36px
+- Border-radius : 4px
+- Font : DM Sans, SemiBold, 15px
+- Lettres espacées : 0.5px
+- Uppercase
+- Border : none
+- Transition : 0.3s ease
+- Hover : Background plus foncé + Translation Y -2px
+- Box-shadow : 0 4px 12px rgba(44,95,122,0.3)
+
+---
+
+### Espacements
+
+**Sections** :
+- Padding vertical : 80px desktop / 60px mobile
+- Padding horizontal : 24px
+
+**Container** :
+- Max-width : 1200px
+- Margin : 0 auto
+- Padding : 0 24px
+
+**Grilles** :
+- Gap : 40px desktop / 24px mobile
+
+---
+
+### Animations
+
+**Au scroll** :
+- Fade-in progressif des sections
+- Compteurs animés (statistiques)
+- Transition : opacity et transform
+
+**Hover** :
+- Boutons : Translation Y -2px
+- Liens : Changement de couleur vers violet
+- Cartes : Légère élévation (box-shadow)
+
+---
+
+## 📱 RESPONSIVE
+
+### Breakpoints (comme Thibaux)
+
+- **Desktop** : > 1024px
+- **Tablet** : 768px - 1024px
+- **Mobile** : < 768px
+
+### Adaptations
+
+**Mobile** :
+- Header : Menu hamburger
+- Hero : Hauteur réduite, textes plus petits
+- Services : 1 colonne empilée
+- Bienvenue : Image puis texte en 1 colonne
+- Timeline : 1 colonne empilée
+- Statistiques : 3 lignes empilées
+- Footer : 1 colonne empilée
+
+**Tablet** :
+- Services : 1 colonne ou 3 colonnes réduites
+- Bienvenue : 2 colonnes maintenues
+- Timeline : 2x2 colonnes
+- Footer : 2 colonnes
+
+---
+
+## ✅ CHECKLIST ASSETS NÉCESSAIRES
+
+### Images à fournir
+
+- [ ] **Logo SAS** (version couleur ET version blanche pour footer)
+- [ ] **Photo bureau Grand-Place** (pour section Bienvenue) - 700x600px min
+- [ ] **Photo hero** (calculatrice/comptabilité stylisée) - 1920x600px min
+- [ ] **Photo actualité** (si section actualités utilisée) - 600x500px min
+
+### Contenus à définir
+
+- [ ] **Années de la timeline** (4 dates importantes de l'histoire de SAS)
+- [ ] **Textes de la timeline** (description de chaque étape)
+- [ ] **Numéro BCE** (pour footer)
+- [ ] **Statistiques exactes** (nombre de clients, années d'expérience, etc.)
+- [ ] **Actualité à mettre en avant** (titre + lien, ou supprimer la section)
+
+---
+
+## 🎯 NOTES IMPORTANTES
+
+### Fidélité au design Thibaux
+
+Ce MVP reproduit **exactement** :
+- La structure des sections
+- L'ordre des éléments
+- Le style des cartes et composants
+- La typographie et les espacements
+- Les couleurs (adaptées avec violet SAS)
+- Les animations et interactions
+
+### Différences adaptées pour SAS
+
+**Ce qui change** :
+- Couleurs : Bleu Thibaux → Bleu foncé/Violet SAS
+- Contenus : Textes adaptés à SAS
+- 3 services au lieu de 3 (Thibaux a "Gestion de copropriété", SAS aura autre chose)
+- Coordonnées et informations de contact
+
+**Ce qui reste identique** :
+- Structure HTML
+- Layout des sections
+- Style des composants
+- Hiérarchie visuelle
+- Animations et transitions
+
+---
+
+## 🚀 ORDRE DE DÉVELOPPEMENT RECOMMANDÉ
+
+1. **Header/Navigation** (avec logo SAS)
+2. **Hero Section** (image de fond + titres)
+3. **Section Services** (3 colonnes fond coloré)
+4. **Section Bienvenue** (image + texte)
+5. **Timeline** (4 étapes)
+6. **Statistiques** (3 chiffres)
+7. **Footer** (3 colonnes)
+8. **Responsive** (adaptation mobile/tablet)
+9. **Animations** (scroll, hover, compteurs)
+10. **Tests et optimisation**
+
+---
+
+## 📊 PERFORMANCE ET SEO
+
+### Performance
+- Images optimisées (WebP + fallback JPG)
+- Lazy loading des images
+- CSS et JS minifiés
+- Font-display: swap pour Google Fonts
+
+### SEO
+- Title : "Expert-Comptable Vilvoorde | SAS Simply Accounts Solutions | ITAA 53.310.893"
+- Meta description : "Cabinet d'expertise comptable à Vilvoorde. Parking Grand-Place. Comptabilité, fiscalité, TVA. Expert agréé ITAA. ☎️ 02.751.82.08"
+- Alt tags sur toutes les images
+- Structure Hn correcte
+- Schema markup LocalBusiness
+
+---
+
+**FIN DU PROMPT MVP PAGE D'ACCUEIL**
+
+*Design basé sur : Fiduciaire Thibaux (https://fiduciaire-thibaux.be/)*
+*Adapté pour : SAS Simply Accounts Solutions*
+*Structure : Page unique (Accueil) - Design identique*

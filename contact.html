@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Contactez SAS Simply Accounts Solutions à Vilvoorde. Grote Markt 3. Parking facile. ☎️ 02.751.82.08 | 0489.87.53.83">
+    <title>Contact | Prendre RDV avec votre Expert-Comptable à Vilvoorde | SAS</title>
+    
+    <!-- Google Fonts -->
+    <link href="https://fonts.googleapis.com/css2?family=Lora:wght@400;500;600;700&family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+    
+    <!-- Font Awesome Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <!-- Header / Navigation -->
+    <header id="header">
+        <div class="container">
+            <div class="header-content">
+                <!-- Logo -->
+                <div class="logo">
+                    <a href="index.html">
+                        <img src="https://huggingface.co/spaces/benneee85/reactify-magic-wand/resolve/main/images/unnamed.png" alt="SAS Logo" class="logo-image">
+                    </a>
+                    <div class="logo-subtitle">Simply Accounts Solutions</div>
+                </div>
+                <!-- Desktop Navigation -->
+                <nav class="nav-desktop">
+                    <a href="index.html" class="nav-link">Accueil</a>
+                    <a href="services.html" class="nav-link">Nos services</a>
+                    <a href="about.html" class="nav-link">À propos</a>
+                    <a href="contact.html" class="nav-link active">Contact</a>
+                    <a href="contact.html" class="btn-primary">Prendre rendez-vous</a>
+                </nav>
+
+                <!-- Mobile Menu Button -->
+                <button class="menu-toggle" id="menuToggle">
+                    <i class="fas fa-bars"></i>
+                </button>
+            </div>
+
+            <!-- Mobile Navigation -->
+            <nav class="nav-mobile" id="mobileMenu">
+                <a href="index.html" class="nav-link">Accueil</a>
+                <a href="services.html" class="nav-link">Nos services</a>
+                <a href="about.html" class="nav-link">À propos</a>
+                <a href="contact.html" class="nav-link active">Contact</a>
+                <a href="contact.html" class="btn-primary">Prendre rendez-vous</a>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Breadcrumb -->
+    <section class="breadcrumb-section">
+        <div class="container">
+            <nav class="breadcrumb">
+                <a href="index.html">Accueil</a>
+                <span class="breadcrumb-separator">></span>
+                <span>Contact</span>
+            </nav>
+        </div>
+    </section>
+
+    <!-- Hero Section -->
+    <section class="page-hero">
+        <div class="container">
+            <h1 class="page-hero-title">Contactez-nous</h1>
+            <p class="page-hero-subtitle">Prenez rendez-vous pour un premier entretien gratuit et sans engagement</p>
+        </div>
+    </section>
+
+    <!-- Contact Main Section -->
+    <section class="contact-main-section">
+        <div class="container">
+            <div class="contact-main-grid">
+                <!-- Formulaire de contact -->
+                <div class="contact-form-wrapper-large">
+                    <h2 class="form-section-title">Envoyez-nous un message</h2>
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Nom complet *</label>
+                            <input type="text" id="name" name="name" placeholder="Votre nom et prénom" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email *</label>
+                            <input type="email" id="email" name="email" placeholder="votre.email@exemple.com" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="phone">Téléphone *</label>
+                            <input type="tel" id="phone" name="phone" placeholder="0X XX XX XX XX" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="clientType">Type de client</label>
+                            <select id="clientType" name="clientType">
+                                <option value="">Sélectionnez...</option>
+                                <option value="Entreprise">Entreprise</option>
+                                <option value="Indépendant">Indépendant</option>
+                                <option value="Particulier">Particulier</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="service">Service concerné</label>
+                            <select id="service" name="service">
+                                <option value="">Sélectionnez...</option>
+                                <option value="Comptabilité">Comptabilité</option>
+                                <option value="Fiscalité">Fiscalité</option>
+                                <option value="TVA">TVA</option>
+                                <option value="Création de société">Création de société</option>
+                                <option value="Services indépendants">Services indépendants</option>
+                                <option value="Services particuliers">Services particuliers</option>
+                                <option value="Autre">Autre</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Votre message *</label>
+                            <textarea id="message" name="message" rows="5" placeholder="Décrivez votre besoin ou votre question..." required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label class="checkbox-label">
+                                <input type="checkbox" id="rgpd" name="rgpd" required>
+                                <span>J'accepte que mes données soient utilisées pour traiter ma demande (<a href="#" target="_blank">Politique de confidentialité</a>)</span>
+                            </label>
+                        </div>
+                        <button type="submit" class="btn-submit">
+                            <i class="fas fa-paper-plane"></i> Envoyer votre message
+                        </button>
+                        <div id="formMessage" class="form-message"></div>
+                    </form>
+                </div>
+
+                <!-- Informations de contact -->
+                <div class="contact-info-large">
+                    <!-- Adresse -->
+                    <div class="info-card-large">
+                        <div class="info-icon-large">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="info-content-large">
+                            <h3>Adresse</h3>
+                            <p><strong>SAS Simply Accounts Solutions</strong><br>
+                            Grote Markt 3 bus 2<br>
+                            1800 Vilvoorde</p>
+                            <p class="info-note"><i class="fas fa-parking"></i> Parking facile disponible directement sous la Grand-Place</p>
+                        </div>
+                    </div>
+
+                    <!-- Téléphone -->
+                    <div class="info-card-large">
+                        <div class="info-icon-large">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="info-content-large">
+                            <h3>Téléphone</h3>
+                            <p><a href="tel:+3227518208">02.751.82.08</a> (ligne fixe)</p>
+                            <p><a href="tel:+32489875383">0489.87.53.83</a> (GSM)</p>
+                            <p><a href="tel:+32492842027">0492.84.20.27</a> (GSM)</p>
+                        </div>
+                    </div>
+
+                    <!-- Email -->
+                    <div class="info-card-large">
+                        <div class="info-icon-large">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="info-content-large">
+                            <h3>Email</h3>
+                            <p><a href="mailto:info@simplyaccounts.be">info@simplyaccounts.be</a></p>
+                        </div>
+                    </div>
+
+                    <!-- Horaires -->
+                    <div class="info-card-large">
+                        <div class="info-icon-large">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="info-content-large">
+                            <h3>Horaires d'ouverture</h3>
+                            <p>Lundi - Vendredi : 10h30 - 16h30<br>
+                            <span class="small-text">Sur rendez-vous uniquement</span></p>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Carte Google Maps -->
+    <section class="map-section">
+        <div class="container">
+            <h2 class="section-title text-center">Comment nous trouver ?</h2>
+            <div class="map-wrapper">
+                <iframe 
+                    src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d2519.5!2d4.425!3d50.928!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0x0!2zNTDCsDU1JzQwLjgiTiA0wrAyNSczMC4wIkU!5e0!3m2!1sfr!2sbe!4v1234567890123!5m2!1sfr!2sbe" 
+                    width="100%" 
+                    height="450" 
+                    style="border:0; border-radius: 1rem;" 
+                    allowfullscreen="" 
+                    loading="lazy" 
+                    referrerpolicy="no-referrer-when-downgrade">
+                </iframe>
+                <div class="map-overlay">
+                    <a href="https://www.google.com/maps/search/Grote+Markt+3+1800+Vilvoorde" target="_blank" class="btn-secondary">
+                        <i class="fas fa-external-link-alt"></i> Ouvrir dans Google Maps
+                    </a>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Comment nous trouver -->
+    <section class="how-to-find-section">
+        <div class="container">
+            <div class="how-to-find-grid">
+                <div class="how-to-find-item">
+                    <div class="how-to-find-icon">
+                        <i class="fas fa-car"></i>
+                    </div>
+                    <h3>En voiture</h3>
+                    <p>Parking disponible directement sous la Grand-Place. Entrée du parking clairement indiquée.</p>
+                </div>
+                <div class="how-to-find-item">
+                    <div class="how-to-find-icon">
+                        <i class="fas fa-bus"></i>
+                    </div>
+                    <h3>En transport en commun</h3>
+                    <p>Gare de Vilvoorde à 10 minutes à pied. Bus 230, 232 arrêt "Grote Markt".</p>
+                </div>
+                <div class="how-to-find-item">
+                    <div class="how-to-find-icon">
+                        <i class="fas fa-walking"></i>
+                    </div>
+                    <h3>À pied/vélo</h3>
+                    <p>Centre-ville facilement accessible. Supports vélos disponibles sur la Grand-Place.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Final -->
+    <section class="cta-section-light">
+        <div class="container">
+            <h2 class="cta-title-dark">Vous préférez nous appeler directement ?</h2>
+            <p class="cta-text-dark">Notre équipe est disponible du lundi au vendredi de 10h30 à 16h30</p>
+            <div class="phone-buttons">
+                <a href="tel:+3227518208" class="phone-button">
+                    <i class="fas fa-phone"></i> 02.751.82.08
+                </a>
+                <a href="tel:+32489875383" class="phone-button">
+                    <i class="fas fa-mobile-alt"></i> 0489.87.53.83
+                </a>
+                <a href="tel:+32492842027" class="phone-button">
+                    <i class="fas fa-mobile-alt"></i> 0492.84.20.27
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer-thibaux">
+        <div class="container">
+            <div class="footer-grid-thibaux">
+                <div class="footer-column-thibaux footer-column-1">
+                    <img src="https://huggingface.co/spaces/benneee85/reactify-magic-wand/resolve/main/images/unnamed.png" alt="SAS Logo" class="footer-logo-thibaux">
+                    <p class="footer-info-thibaux">
+                        Expert-Comptable<br>
+                        ITAA 53.310.893<br>
+                        BCE 0797.968.124
+                    </p>
+                </div>
+                <div class="footer-column-thibaux footer-column-2">
+                    <h4 class="footer-title-thibaux">NOS SERVICES</h4>
+                    <ul class="footer-links-thibaux">
+                        <li><a href="services.html#comptabilite">Comptabilité & Fiscalité</a></li>
+                        <li><a href="services.html#tva">TVA</a></li>
+                        <li><a href="services.html#creation">Création d'entreprise</a></li>
+                        <li><a href="services.html#independants">Services indépendants</a></li>
+                        <li><a href="services.html#particuliers">Services particuliers</a></li>
+                    </ul>
+                </div>
+                <div class="footer-column-thibaux footer-column-3">
+                    <h4 class="footer-title-thibaux">INFORMATIONS DE CONTACT</h4>
+                    <ul class="footer-contact-thibaux">
+                        <li><i class="fas fa-phone"></i> <a href="tel:+3227518208">+32 (0)2 / 751 82 08</a></li>
+                        <li><i class="fas fa-mobile-alt"></i> <a href="tel:+32489875383">+32 (0)489 / 87 53 83</a></li>
+                        <li><i class="fas fa-mobile-alt"></i> <a href="tel:+32492842027">+32 (0)492 / 84 20 27</a></li>
+                        <li><i class="fas fa-envelope"></i> <a href="mailto:info@simplyaccounts.be">info@simplyaccounts.be</a></li>
+                        <li><i class="fas fa-map-marker-alt"></i> Grote Markt 3 bus 2<br>1800 Vilvoorde</li>
+                        <li><i class="fas fa-parking"></i> Parking sous la Grand-Place</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom-thibaux">
+                <div class="footer-copyright-thibaux">
+                    <p>Copyright © 2025 SAS Simply Accounts Solutions</p>
+                </div>
+                <div class="footer-legal-thibaux">
+                    <a href="legal.html">Mentions légales</a>
+                    <span>|</span>
+                    <a href="#">Politique des cookies</a>
+                    <span>|</span>
+                    <a href="#">Politique de confidentialité</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+        // Pré-remplir le service si présent dans l'URL
+        const urlParams = new URLSearchParams(window.location.search);
+        const serviceParam = urlParams.get('service');
+        if (serviceParam) {
+            const serviceMap = {
+                'comptabilite': 'Comptabilité',
+                'fiscalite': 'Fiscalité',
+                'tva': 'TVA',
+                'creation': 'Création de société',
+                'independants': 'Services indépendants',
+                'particuliers': 'Services particuliers'
+            };
+            const serviceSelect = document.getElementById('service');
+            if (serviceSelect && serviceMap[serviceParam]) {
+                serviceSelect.value = serviceMap[serviceParam];
+            }
+        }
+    </script>
+</body>
+</html>
+
