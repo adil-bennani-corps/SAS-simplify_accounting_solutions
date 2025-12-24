@@ -4792,6 +4792,94 @@ ul {
     margin: 0;
 }
 
+/* Section Qui nous sommes */
+.section-qui-sommes {
+    background: #FFFFFF;
+    padding: 80px 24px;
+}
+
+.qui-sommes-grid {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 60px;
+    align-items: center;
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.qui-sommes-image {
+    width: 100%;
+}
+
+.qui-sommes-image img {
+    width: 100%;
+    height: auto;
+    border-radius: 12px;
+    box-shadow: 0 10px 40px rgba(0, 0, 0, 0.1);
+    object-fit: cover;
+}
+
+.qui-sommes-content {
+    display: flex;
+    flex-direction: column;
+}
+
+.qui-sommes-title {
+    font-family: var(--font-serif);
+    font-size: 36px;
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 24px;
+}
+
+.qui-sommes-text {
+    font-family: var(--font-sans);
+    font-size: 17px;
+    color: #4A5568;
+    line-height: 1.8;
+    margin-bottom: 20px;
+}
+
+.qui-sommes-features {
+    list-style: none;
+    padding: 0;
+    margin: 24px 0 32px 0;
+}
+
+.qui-sommes-features li {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    margin-bottom: 12px;
+    font-family: var(--font-sans);
+    font-size: 16px;
+    color: #4A5568;
+}
+
+.qui-sommes-features li i {
+    font-size: 18px;
+    color: #9B5BA5;
+}
+
+.btn-qui-sommes {
+    display: inline-block;
+    background: #9B5BA5;
+    color: #FFFFFF;
+    padding: 14px 32px;
+    border-radius: 6px;
+    font-family: var(--font-sans);
+    font-weight: 600;
+    font-size: 16px;
+    text-decoration: none;
+    transition: all 0.3s ease;
+    align-self: flex-start;
+}
+
+.btn-qui-sommes:hover {
+    background: #7E4A87;
+    transform: translateY(-2px);
+}
+
 /* Section Pour qui */
 .section-pour-qui-new {
     background: #FFFFFF;
@@ -5392,6 +5480,15 @@ ul {
     
     .section-title-new {
         font-size: 32px;
+    }
+    
+    .qui-sommes-grid {
+        grid-template-columns: 1fr;
+        gap: 40px;
+    }
+    
+    .qui-sommes-title {
+        font-size: 28px;
     }
     
     .pour-qui-grid-new,
