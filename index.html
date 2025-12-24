@@ -246,8 +246,8 @@
 
         // Observer pour déclencher l'animation au scroll
         const observerOptions = {
-            threshold: 0.5,
-            rootMargin: '0px'
+            threshold: 0.1,
+            rootMargin: '0px 0px -50px 0px'
         };
 
         const statsObserver = new IntersectionObserver((entries) => {
@@ -260,6 +260,7 @@
                             animateCounter(num);
                         }
                     });
+                    statsObserver.unobserve(entry.target);
                 }
             });
         }, observerOptions);
@@ -267,6 +268,19 @@
         const statsSection = document.querySelector('.stats-thibaux');
         if (statsSection) {
             statsObserver.observe(statsSection);
+            
+            // Vérifier si la section est déjà visible au chargement
+            const rect = statsSection.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isVisible) {
+                const numbers = statsSection.querySelectorAll('.stat-number-thibaux');
+                numbers.forEach(num => {
+                    if (!num.classList.contains('animated')) {
+                        num.classList.add('animated');
+                        animateCounter(num);
+                    }
+                });
+            }
         }
     </script>
 </body>
