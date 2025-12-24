@@ -269,8 +269,8 @@ const animateCounter = (element, target, hasPlus = false, duration = 2000) => {
 };
 
 const statsObserverOptions = {
-    threshold: 0.5,
-    rootMargin: '0px'
+    threshold: 0.1,
+    rootMargin: '0px 0px -100px 0px'
 };
 
 const statsObserver = new IntersectionObserver((entries) => {
@@ -279,9 +279,14 @@ const statsObserver = new IntersectionObserver((entries) => {
             const statNumbers = entry.target.querySelectorAll('.stat-number-about');
             statNumbers.forEach(stat => {
                 const targetValue = stat.getAttribute('data-target');
+                if (!targetValue) return;
+                
                 const hasPlus = targetValue.includes('+');
                 const target = parseInt(targetValue);
-                if (target && stat.textContent === '0') {
+                const currentText = stat.textContent.trim();
+                
+                // Vérifier si le compteur n'a pas encore été animé
+                if (target && (currentText === '0' || currentText === '')) {
                     animateCounter(stat, target, hasPlus);
                 }
             });
@@ -291,9 +296,19 @@ const statsObserver = new IntersectionObserver((entries) => {
 }, statsObserverOptions);
 
 // Observe stats section if it exists
-const statsSection = document.querySelector('.stats-section');
-if (statsSection) {
-    statsObserver.observe(statsSection);
+const initStatsObserver = () => {
+    const statsSection = document.querySelector('.stats-section');
+    if (statsSection) {
+        statsObserver.observe(statsSection);
+    }
+};
+
+// Initialiser l'observer quand le DOM est prêt
+if (document.readyState === 'loading') {
+    document.addEventListener('DOMContentLoaded', initStatsObserver);
+} else {
+    // DOM déjà chargé
+    initStatsObserver();
 }
 
 // =====================================
