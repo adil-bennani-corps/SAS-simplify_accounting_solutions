@@ -279,8 +279,8 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 
     // Observer pour déclencher l'animation au scroll
     const observerOptions = {
-        threshold: 0.3,
-        rootMargin: '0px'
+        threshold: 0.1,
+        rootMargin: '0px 0px -100px 0px'
     };
 
     const statsObserver = new IntersectionObserver((entries) => {
@@ -303,6 +303,19 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
         const statsSection = document.querySelector('.stats-section');
         if (statsSection) {
             statsObserver.observe(statsSection);
+            
+            // Vérifier si la section est déjà visible au chargement
+            const rect = statsSection.getBoundingClientRect();
+            const isVisible = rect.top < window.innerHeight && rect.bottom > 0;
+            if (isVisible) {
+                const numbers = statsSection.querySelectorAll('.stat-number-about');
+                numbers.forEach(num => {
+                    if (!num.classList.contains('animated')) {
+                        num.classList.add('animated');
+                        animateCounter(num);
+                    }
+                });
+            }
         }
     }
 
@@ -310,7 +323,8 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
     if (document.readyState === 'loading') {
         document.addEventListener('DOMContentLoaded', initAboutStats);
     } else {
-        initAboutStats();
+        // Utiliser setTimeout pour s'assurer que le DOM est complètement chargé
+        setTimeout(initAboutStats, 100);
     }
 })();
 
