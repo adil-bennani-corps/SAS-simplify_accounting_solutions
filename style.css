@@ -5435,8 +5435,7 @@ ul {
     
     .pour-qui-grid-new,
     .services-grid-new,
-    .pourquoi-grid-new,
-    .testimonials-grid {
+    .pourquoi-grid-new {
         grid-template-columns: 1fr;
     }
     
