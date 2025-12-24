@@ -251,68 +251,68 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 // =====================================
 // Animated Statistics Counters (About Page)
 // =====================================
-function animateCounter(element, target, hasPlus = false, duration = 2000) {
-    let current = 0;
-    const increment = target / (duration / 16); // ~60fps
-    
-    function updateCounter() {
-        current += increment;
-        if (current < target) {
-            element.textContent = Math.floor(current) + (hasPlus ? '+' : '');
-            requestAnimationFrame(updateCounter);
-        } else {
-            element.textContent = target + (hasPlus ? '+' : '');
-        }
+(function() {
+    function animateCounter(element) {
+        const targetValue = element.getAttribute('data-target');
+        if (!targetValue) return;
+        
+        const hasPlus = targetValue.includes('+');
+        const target = parseInt(targetValue.replace('+', ''));
+        if (isNaN(target) || target <= 0) return;
+        
+        const duration = 2000;
+        const increment = target / (duration / 16);
+        let current = 0;
+        
+        const updateCounter = () => {
+            current += increment;
+            if (current < target) {
+                element.textContent = Math.floor(current) + (hasPlus ? '+' : '');
+                requestAnimationFrame(updateCounter);
+            } else {
+                element.textContent = target + (hasPlus ? '+' : '');
+            }
+        };
+        
+        updateCounter();
     }
-    
-    updateCounter();
-}
 
-// Initialiser les compteurs de statistiques pour about.html
-function initAboutStatsCounters() {
-    const statsSection = document.querySelector('.stats-section');
-    if (!statsSection) return;
-    
-    const statsObserverOptions = {
-        threshold: 0.1,
-        rootMargin: '0px 0px -50px 0px'
+    // Observer pour déclencher l'animation au scroll
+    const observerOptions = {
+        threshold: 0.3,
+        rootMargin: '0px'
     };
-    
+
     const statsObserver = new IntersectionObserver((entries) => {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
-                const statNumbers = entry.target.querySelectorAll('.stat-number-about');
-                statNumbers.forEach(stat => {
-                    // Vérifier si déjà animé pour éviter de relancer
-                    if (stat.hasAttribute('data-animated')) return;
-                    stat.setAttribute('data-animated', 'true');
-                    
-                    const targetValue = stat.getAttribute('data-target');
-                    if (!targetValue) return;
-                    
-                    const hasPlus = targetValue.includes('+');
-                    const targetNum = parseInt(targetValue.replace('+', ''));
-                    
-                    if (!isNaN(targetNum) && targetNum > 0) {
-                        animateCounter(stat, targetNum, hasPlus);
+                const numbers = entry.target.querySelectorAll('.stat-number-about');
+                numbers.forEach(num => {
+                    if (!num.classList.contains('animated')) {
+                        num.classList.add('animated');
+                        animateCounter(num);
                     }
                 });
-                
                 statsObserver.unobserve(entry.target);
             }
         });
-    }, statsObserverOptions);
-    
-    statsObserver.observe(statsSection);
-}
+    }, observerOptions);
 
-// Initialiser quand le DOM est prêt
-if (document.readyState === 'loading') {
-    document.addEventListener('DOMContentLoaded', initAboutStatsCounters);
-} else {
-    // DOM déjà chargé, initialiser immédiatement
-    setTimeout(initAboutStatsCounters, 100);
-}
+    // Initialiser l'observer
+    function initAboutStats() {
+        const statsSection = document.querySelector('.stats-section');
+        if (statsSection) {
+            statsObserver.observe(statsSection);
+        }
+    }
+
+    // Attendre que le DOM soit prêt
+    if (document.readyState === 'loading') {
+        document.addEventListener('DOMContentLoaded', initAboutStats);
+    } else {
+        initAboutStats();
+    }
+})();
 
 // =====================================
 // Add Active State to Navigation Links
