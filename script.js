@@ -249,6 +249,54 @@ document.querySelectorAll('a[href="#"]').forEach(link => {
 });
 
 // =====================================
+// Animated Statistics Counters (About Page)
+// =====================================
+const animateCounter = (element, target, hasPlus = false, duration = 2000) => {
+    let start = 0;
+    const increment = target / (duration / 16); // 60fps
+    
+    const updateCounter = () => {
+        start += increment;
+        if (start < target) {
+            element.textContent = Math.floor(start) + (hasPlus ? '+' : '');
+            requestAnimationFrame(updateCounter);
+        } else {
+            element.textContent = target + (hasPlus ? '+' : '');
+        }
+    };
+    
+    updateCounter();
+};
+
+const statsObserverOptions = {
+    threshold: 0.5,
+    rootMargin: '0px'
+};
+
+const statsObserver = new IntersectionObserver((entries) => {
+    entries.forEach(entry => {
+        if (entry.isIntersecting) {
+            const statNumbers = entry.target.querySelectorAll('.stat-number-about');
+            statNumbers.forEach(stat => {
+                const targetValue = stat.getAttribute('data-target');
+                const hasPlus = targetValue.includes('+');
+                const target = parseInt(targetValue);
+                if (target && stat.textContent === '0') {
+                    animateCounter(stat, target, hasPlus);
+                }
+            });
+            statsObserver.unobserve(entry.target);
+        }
+    });
+}, statsObserverOptions);
+
+// Observe stats section if it exists
+const statsSection = document.querySelector('.stats-section');
+if (statsSection) {
+    statsObserver.observe(statsSection);
+}
+
+// =====================================
 // Add Active State to Navigation Links
 // =====================================
 const sections = document.querySelectorAll('section[id]');
