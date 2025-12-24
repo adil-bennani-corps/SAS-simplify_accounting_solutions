@@ -4101,6 +4101,14 @@ ul {
     margin: 0;
 }
 
+.service-icon-thibaux {
+    font-size: 48px;
+    color: #FFFFFF;
+    margin-bottom: 20px;
+    display: block;
+    text-align: center;
+}
+
 /* Bienvenue Thibaux */
 .bienvenue-thibaux {
     background: #FFFFFF;
@@ -4151,6 +4159,27 @@ ul {
 .bienvenue-badge-thibaux i {
     font-size: 24px;
     color: #9B5BA5;
+}
+
+.bienvenue-features-thibaux {
+    list-style: none;
+    padding: 0;
+    margin: 0 0 30px;
+}
+
+.bienvenue-features-thibaux li {
+    font-family: var(--font-sans);
+    font-size: 17px;
+    color: #4A5568;
+    line-height: 2;
+    display: flex;
+    align-items: center;
+    gap: 12px;
+}
+
+.bienvenue-features-thibaux li i {
+    color: #9B5BA5;
+    font-size: 18px;
 }
 
 .bienvenue-badge-thibaux strong {
