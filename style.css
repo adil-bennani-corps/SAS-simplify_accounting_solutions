@@ -3700,6 +3700,56 @@ ul {
     right: 20px;
 }
 
+@media (max-width: 768px) {
+    .map-address-box {
+        padding: 24px 28px;
+        margin-bottom: 24px;
+    }
+    
+    .map-address-content {
+        gap: 16px;
+    }
+    
+    .map-address-content i {
+        font-size: 28px;
+    }
+    
+    .map-address-text h3 {
+        font-size: 20px;
+        margin-bottom: 10px;
+    }
+    
+    .map-address-text p {
+        font-size: 16px;
+    }
+}
+
+@media (max-width: 480px) {
+    .map-address-box {
+        padding: 20px 24px;
+        margin-bottom: 20px;
+    }
+    
+    .map-address-content {
+        flex-direction: column;
+        gap: 12px;
+        text-align: center;
+    }
+    
+    .map-address-content i {
+        font-size: 24px;
+        margin-top: 0;
+    }
+    
+    .map-address-text h3 {
+        font-size: 18px;
+    }
+    
+    .map-address-text p {
+        font-size: 15px;
+    }
+}
+
 .how-to-find-section {
     padding: 4rem 0;
     background: white;
