@@ -3641,6 +3641,52 @@ ul {
     background: var(--bg-light);
 }
 
+.map-address-box {
+    background: #FFFFFF;
+    border-radius: 12px;
+    padding: 32px 40px;
+    margin-bottom: 32px;
+    box-shadow: 0 4px 16px rgba(0, 0, 0, 0.08);
+    border-left: 4px solid #9B5BA5;
+    max-width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.map-address-content {
+    display: flex;
+    align-items: flex-start;
+    gap: 20px;
+}
+
+.map-address-content i {
+    font-size: 32px;
+    color: #9B5BA5;
+    margin-top: 4px;
+    flex-shrink: 0;
+}
+
+.map-address-text h3 {
+    font-family: var(--font-serif);
+    font-size: 24px;
+    font-weight: 700;
+    color: #2C3E50;
+    margin-bottom: 12px;
+}
+
+.map-address-text p {
+    font-family: var(--font-sans);
+    font-size: 18px;
+    color: #4A5568;
+    line-height: 1.8;
+    margin: 0;
+}
+
+.map-address-text strong {
+    color: #2C3E50;
+    font-weight: 700;
+}
+
 .map-wrapper {
     position: relative;
     border-radius: 1rem;
