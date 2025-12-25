@@ -4460,6 +4460,43 @@ ul {
     .hero-subtitle-thibaux {
         font-size: 22px;
     }
+}
+
+@media (max-width: 768px) {
+    .header-content-thibaux {
+        padding: 0.75rem 0;
+    }
+    
+    .logo-image-thibaux {
+        height: 40px;
+    }
+    
+    .menu-toggle-thibaux {
+        font-size: 1.5rem;
+    }
+    
+    .nav-mobile-thibaux {
+        padding: 0.75rem 0;
+    }
+    
+    .nav-link-thibaux {
+        font-size: 15px;
+        padding: 0.5rem 0;
+    }
+}
+
+@media (max-width: 480px) {
+    .header-content-thibaux {
+        padding: 0.5rem 0;
+    }
+    
+    .logo-image-thibaux {
+        height: 35px;
+    }
+    
+    .menu-toggle-thibaux {
+        font-size: 1.25rem;
+    }
 
     .services-grid-thibaux {
         grid-template-columns: 1fr;
@@ -5404,57 +5441,374 @@ ul {
 }
 
 @media (max-width: 768px) {
+    .container {
+        padding: 0 16px;
+    }
+    
     .hero-new {
         height: 500px;
     }
     
+    .hero-content-new {
+        padding: 0 16px;
+    }
+    
     .hero-title-new {
-        font-size: 36px;
+        font-size: 32px;
+        margin-bottom: 16px;
     }
     
     .hero-subtitle-new {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 32px;
+    }
+    
+    .btn-hero-new {
+        padding: 14px 32px;
+        font-size: 15px;
+        margin-bottom: 40px;
+    }
+    
+    .hero-badges-new {
+        gap: 12px;
+        flex-direction: column;
+        align-items: center;
+    }
+    
+    .hero-badge-item {
+        padding: 10px 20px;
+        font-size: 13px;
+    }
+    
+    .section-qui-sommes,
+    .section-pour-qui-new,
+    .section-services-new,
+    .section-pourquoi-new,
+    .section-processus-new,
+    .section-faq-new,
+    .section-contact-new,
+    .section-cta-final-new {
+        padding: 60px 16px;
+    }
+    
+    .section-header-new {
+        margin-bottom: 40px;
     }
     
     .section-title-new {
-        font-size: 32px;
+        font-size: 28px;
     }
     
     .qui-sommes-grid {
         grid-template-columns: 1fr;
-        gap: 40px;
+        gap: 32px;
     }
     
     .qui-sommes-image img {
-        height: 350px;
+        height: 300px;
     }
     
     .qui-sommes-title {
-        font-size: 32px;
+        font-size: 28px;
+        margin-bottom: 20px;
+    }
+    
+    .qui-sommes-text {
+        font-size: 16px;
+        margin-bottom: 16px;
+    }
+    
+    .qui-sommes-features {
+        margin: 24px 0 32px 0;
+    }
+    
+    .qui-sommes-features li {
+        font-size: 15px;
+        margin-bottom: 12px;
+    }
+    
+    .btn-qui-sommes {
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+    
+    .pour-qui-card-new {
+        padding: 32px 24px;
+    }
+    
+    .pour-qui-icon-wrapper {
+        width: 60px;
+        height: 60px;
+    }
+    
+    .pour-qui-icon-wrapper i {
+        font-size: 28px;
+    }
+    
+    .pour-qui-card-title {
+        font-size: 20px;
+        margin-bottom: 16px;
+    }
+    
+    .pour-qui-card-description {
+        font-size: 15px;
+        margin-bottom: 24px;
+    }
+    
+    .pour-qui-list-new li {
+        font-size: 14px;
+        margin-bottom: 10px;
     }
     
     .pour-qui-grid-new,
     .services-grid-new,
     .pourquoi-grid-new {
         grid-template-columns: 1fr;
+        gap: 24px;
+    }
+    
+    .service-card-new {
+        padding: 32px 24px;
+    }
+    
+    .service-icon-new {
+        font-size: 40px;
+        margin-bottom: 20px;
+    }
+    
+    .service-card-title-new {
+        font-size: 20px;
+        margin-bottom: 12px;
+    }
+    
+    .service-card-text-new {
+        font-size: 15px;
+    }
+    
+    .btn-services-cta {
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+    
+    .pourquoi-icon-new {
+        font-size: 36px;
+        margin-bottom: 16px;
+    }
+    
+    .pourquoi-title-new {
+        font-size: 17px;
+        margin-bottom: 10px;
+    }
+    
+    .pourquoi-text-new {
+        font-size: 14px;
+    }
+    
+    .processus-number-new {
+        font-size: 48px;
+        margin-bottom: 12px;
+    }
+    
+    .processus-title-new {
+        font-size: 18px;
+        margin-bottom: 10px;
+    }
+    
+    .processus-text-new {
+        font-size: 14px;
+    }
+    
+    .faq-question-new {
+        padding: 16px 20px;
+    }
+    
+    .faq-question-new span {
+        font-size: 15px;
+    }
+    
+    .faq-answer-new {
+        padding: 0 20px 16px;
+    }
+    
+    .faq-answer-new p {
+        font-size: 14px;
+    }
+    
+    .contact-item-new {
+        margin-bottom: 20px;
+    }
+    
+    .contact-icon-new {
+        font-size: 18px;
+    }
+    
+    .contact-text-new {
+        font-size: 15px;
+    }
+    
+    .btn-contact-cta {
+        padding: 14px 32px;
+        font-size: 15px;
+        margin-top: 24px;
+    }
+    
+    .contact-map-new iframe {
+        height: 300px;
     }
     
     .cta-final-title-new {
-        font-size: 32px;
+        font-size: 28px;
+        margin-bottom: 12px;
     }
     
     .cta-final-subtitle-new {
-        font-size: 18px;
+        font-size: 16px;
+        margin-bottom: 32px;
     }
     
     .cta-buttons-new {
         flex-direction: column;
+        gap: 16px;
         width: 100%;
+        max-width: 400px;
+        margin: 0 auto;
     }
     
     .btn-cta-primary,
     .btn-cta-secondary {
         width: 100%;
+        padding: 14px 32px;
+        font-size: 15px;
+    }
+}
+
+@media (max-width: 480px) {
+    .container {
+        padding: 0 12px;
+    }
+    
+    .hero-new {
+        height: 450px;
+    }
+    
+    .hero-title-new {
+        font-size: 28px;
+        line-height: 1.3;
+    }
+    
+    .hero-subtitle-new {
+        font-size: 15px;
+    }
+    
+    .btn-hero-new {
+        padding: 12px 28px;
+        font-size: 14px;
+        margin-bottom: 32px;
+    }
+    
+    .hero-badge-item {
+        padding: 8px 16px;
+        font-size: 12px;
+    }
+    
+    .hero-badge-item i {
+        font-size: 16px;
+    }
+    
+    .section-qui-sommes,
+    .section-pour-qui-new,
+    .section-services-new,
+    .section-pourquoi-new,
+    .section-processus-new,
+    .section-faq-new,
+    .section-contact-new,
+    .section-cta-final-new {
+        padding: 50px 12px;
+    }
+    
+    .section-title-new {
+        font-size: 24px;
+    }
+    
+    .qui-sommes-image img {
+        height: 250px;
+    }
+    
+    .qui-sommes-title {
+        font-size: 24px;
+    }
+    
+    .qui-sommes-text {
+        font-size: 15px;
+    }
+    
+    .pour-qui-card-new {
+        padding: 24px 20px;
+    }
+    
+    .pour-qui-icon-wrapper {
+        width: 50px;
+        height: 50px;
+    }
+    
+    .pour-qui-icon-wrapper i {
+        font-size: 24px;
+    }
+    
+    .pour-qui-card-title {
+        font-size: 18px;
+    }
+    
+    .service-card-new {
+        padding: 24px 20px;
+    }
+    
+    .service-icon-new {
+        font-size: 36px;
+    }
+    
+    .service-card-title-new {
+        font-size: 18px;
+    }
+    
+    .pourquoi-icon-new {
+        font-size: 32px;
+    }
+    
+    .pourquoi-title-new {
+        font-size: 16px;
+    }
+    
+    .processus-number-new {
+        font-size: 40px;
+    }
+    
+    .processus-title-new {
+        font-size: 16px;
+    }
+    
+    .faq-question-new {
+        padding: 14px 16px;
+    }
+    
+    .faq-question-new span {
+        font-size: 14px;
+    }
+    
+    .contact-map-new iframe {
+        height: 250px;
+    }
+    
+    .cta-final-title-new {
+        font-size: 24px;
+    }
+    
+    .cta-final-subtitle-new {
+        font-size: 15px;
+    }
+    
+    .cta-buttons-new {
+        max-width: 100%;
     }
 }
 
